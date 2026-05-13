@@ -291,9 +291,298 @@ const BOOSTS = [
       {q:"Bien à 10 000 € HT, valeur résiduelle 2 000 €, durée 4 ans. Base amortissable comptable ?",opts:["12 000 €","10 000 €","8 000 €","6 000 €"],ans:2,expl:"Base amortissable comptable = Valeur d'entrée HT – Valeur résiduelle = 10 000 – 2 000 = 8 000 €. L'annuité linéaire comptable serait alors de 8 000 / 4 = 2 000 € par an."},
       {q:"Même bien en fiscal linéaire, base amortissable ?",opts:["6 000 €","12 000 €","8 000 €","10 000 €"],ans:3,expl:"En fiscal, la valeur résiduelle n'est JAMAIS déduite. Base fiscale linéaire = Valeur d'entrée HT = 10 000 €. L'annuité fiscale linéaire serait de 10 000 / 4 = 2 500 € par an. D'où un amortissement dérogatoire de 2 500 – 2 000 = 500 € la première année (si même durée)."}
     ]
-  }
+  },
+  
+  
+  
+  {
+  id: "boost_16",
+  date: "23/04/2026",
+  icon: "🌍",
+  label: "Quiz TVA UE & étranger",
+  sub: "Révisions TVA intracommunautaire et import/export",
+  color: "#5b7cff",
 
-  ,{
+  questions: [
+
+    {
+      q: "Une vente de biens à un client assujetti en Allemagne est :",
+      opts: [
+        "Hors champ de TVA",
+        "Exonérée de TVA française",
+        "Soumise à TVA française",
+        "Soumise à TVA allemande dès la facturation"
+      ],
+      ans: 1,
+      expl: "Une livraison intracommunautaire à un assujetti européen peut être exonérée de TVA française sous conditions."
+    },
+
+    {
+      q: "Un achat de marchandises à un fournisseur italien par une société française est :",
+      opts: [
+        "Une exportation",
+        "Une prestation de services",
+        "Une acquisition intracommunautaire",
+        "Une importation"
+      ],
+      ans: 2,
+      expl: "Un achat entre deux pays de l'Union Européenne constitue une acquisition intracommunautaire."
+    },
+
+    {
+      q: "La TVA sur une acquisition intracommunautaire est en principe :",
+      opts: [
+        "Toujours exonérée",
+        "Due uniquement dans le pays d’origine",
+        "Facturée par le fournisseur",
+        "Autoliquidée"
+      ],
+      ans: 3,
+      expl: "La TVA sur les acquisitions intracommunautaires est autoliquidée par l'entreprise française."
+    },
+
+    {
+      q: "L'autoliquidation de la TVA signifie que :",
+      opts: [
+        "Il faut payer la TVA sur l'achat à l'État",
+        "On enregistre en même temps une TVA due et une TVA déductible",
+        "Le fournisseur doit faire la déclaration"
+      ],
+      ans: 1,
+      expl: "L'autoliquidation consiste à enregistrer simultanément une TVA collectée et une TVA déductible."
+    },
+
+    {
+      q: "Pour une livraison intracommunautaire, la vente est enregistrée :",
+      opts: [
+        "Avec TVA étrangère du client",
+        "Avec TVA française sur le chiffre d’affaires",
+        "En hors comptabilité",
+        "Sans TVA collectée, si les conditions sont remplies"
+      ],
+      ans: 3,
+      expl: "Les livraisons intracommunautaires peuvent être exonérées de TVA française sous certaines conditions."
+    },
+
+    {
+      q: "Quel compte est utilisé pour la TVA déductible sur acquisitions intracommunautaires ?",
+      opts: [
+        "44562",
+        "445662",
+        "401",
+        "4452"
+      ],
+      ans: 1,
+      expl: "Le compte 445662 correspond à la TVA déductible intracommunautaire."
+    },
+
+    {
+      q: "Quel compte est utilisé pour constater la TVA due sur acquisitions intracommunautaires ?",
+      opts: [
+        "44562",
+        "445712",
+        "4452",
+        "4455"
+      ],
+      ans: 1,
+      expl: "Le compte 445712 sert à enregistrer la TVA due intracommunautaire."
+    },
+
+    {
+      q: "À l’entrée de biens en France depuis la Chine, on parle de :",
+      opts: [
+        "Une acquisition extra-communautaire",
+        "Une exportation",
+        "Une prestation de services",
+        "Une importation"
+      ],
+      ans: 3,
+      expl: "L'entrée de biens depuis un pays hors UE correspond à une importation."
+    },
+
+    {
+      q: "À la réception d’une facture d’achat d'importation, la TVA est généralement :",
+      opts: [
+        "Jamais comptabilisée",
+        "Toujours payée à l’État d’origine",
+        "Comptabilisée uniquement en charge",
+        "Déduite et collectée en même temps"
+      ],
+      ans: 3,
+      expl: "La TVA d'importation peut être autoliquidée avec TVA collectée et déductible simultanément."
+    },
+
+    {
+      q: "Une exportation de biens vers le Canada est en principe :",
+      opts: [
+        "Comptabilisée comme une acquisition intracommunautaire",
+        "Exonérée de TVA française",
+        "Soumise à TVA française",
+        "Taxée dans tous les cas en France"
+      ],
+      ans: 1,
+      expl: "Les exportations hors UE sont généralement exonérées de TVA française."
+    },
+
+    {
+      q: "Quel compte est généralement utilisé pour la TVA déductible sur une importation ?",
+      opts: [
+        "445662",
+        "445663",
+        "44562",
+        "44566"
+      ],
+      ans: 1,
+      expl: "Le compte 445663 est utilisé pour la TVA déductible sur autres biens et services/importations."
+    }
+
+  ]
+},
+  
+  
+  
+  {
+   id: "boost_17",
+  date: "12/05/2026",
+  icon: "🌍",
+  label: "Morning Boost TVA",
+  sub: "TVA, exportations et livraisons intracommunautaires",
+  color: "#6c63ff",
+
+  questions: [
+
+    {
+      q: "Pour une livraison intracommunautaire à un professionnel, on retient souvent :",
+      opts: [
+        "Une vente sans facture",
+        "Une opération taxable en France",
+        "La TVA française est toujours facturée",
+        "Une opération exonérée sous conditions"
+      ],
+      ans: 3,
+      expl: "La livraison intracommunautaire peut être exonérée sous certaines conditions."
+    },
+
+    {
+      q: "Le taux de 10 % s’applique souvent à :",
+      opts: [
+        "Certaines prestations de restauration",
+        "Les exportations",
+        "Les salaires",
+        "Toutes les livraisons de biens"
+      ],
+      ans: 0,
+      expl: "Le taux réduit de 10 % concerne notamment certaines activités de restauration."
+    },
+
+    {
+      q: "Une facture d’achat avec TVA peut être déduite si :",
+      opts: [
+        "Le paiement a été fait en espèces uniquement",
+        "L’achat est lié à l’activité taxable",
+        "La dépense est personnelle",
+        "La facture est au nom d’un salarié"
+      ],
+      ans: 1,
+      expl: "La TVA est déductible lorsque la dépense est engagée pour l’activité professionnelle."
+    },
+
+    {
+      q: "Une vente de biens vers un pays hors UE est :",
+      opts: [
+        "Une importation",
+        "Une livraison intracommunautaire",
+        "Une vente domestique",
+        "Une exportation"
+      ],
+      ans: 3,
+      expl: "Une vente vers un pays hors Union Européenne correspond à une exportation."
+    },
+
+    {
+      q: "Une prestation de services à un client français est en principe soumise :",
+      opts: [
+        "À la TVA espagnole",
+        "À aucune TVA",
+        "À la TVA française",
+        "À la TVA hors UE"
+      ],
+      ans: 2,
+      expl: "Lorsqu’une prestation est réalisée pour un client français, la TVA française s’applique généralement."
+    },
+
+    {
+      q: "Pour une prestation de services, la TVA est souvent exigible :",
+      opts: [
+        "À la fabrication du produit",
+        "À la mise en rayon",
+        "À l’impression du devis",
+        "À l’encaissement"
+      ],
+      ans: 3,
+      expl: "Pour les prestations de services, la TVA est souvent exigible à l’encaissement."
+    },
+
+    
+    
+    
+    
+    
+    {
+      q: "Quel document permet souvent de justifier la TVA déductible ?",
+      opts: [
+        "Le devis",
+        "La facture",
+        "Le bon de livraison seul",
+        "Le ticket de caisse seul, toujours"
+      ],
+      ans: 1,
+      expl: "La facture est le document principal permettant de justifier la TVA déductible."
+    },
+
+    {
+      q: "La TVA déductible est généralement récupérable quand :",
+      opts: [
+        "La dépense est un salaire",
+        "La dépense est personnelle",
+        "La dépense concerne un impôt",
+        "La dépense sert l’activité taxable"
+      ],
+      ans: 3,
+      expl: "La TVA est récupérable lorsque la dépense est liée à l’activité économique taxable."
+    },
+
+    {
+      q: "Une exportation correspond à une vente de biens :",
+      opts: [
+        "Entre deux entreprises françaises",
+        "Entre deux pays de l’UE",
+        "Vers un pays hors UE",
+        "À l’intérieur du même département"
+      ],
+      ans: 2,
+      expl: "Une exportation correspond à un envoi de biens vers un pays hors Union Européenne."
+    },
+
+    {
+      q: "Pour une vente de biens à un client professionnel dans l’UE, on parle souvent de :",
+      opts: [
+        "Livraison intracommunautaire",
+        "Importation",
+        "Exportation",
+        "Prestation domestique"
+      ],
+      ans: 0,
+      expl: "Une vente de biens à un professionnel situé dans l’Union Européenne constitue généralement une livraison intracommunautaire."
+    }
+
+  ]
+},
+  
+  
+  
+  
+  {
     id:"boost_15", date:"30/04/2026", icon:"🔬",
     label:"Amortissements & Dépréciations", sub:"VNC, valeur actuelle, dépréciation, comptes 6811/6816/291, calculs",
     color:"#e040fb",
@@ -301,7 +590,7 @@ const BOOSTS = [
       {q:"Quel compte utiliser pour constater une dotation aux amortissements ?",opts:["6811","6816","281","512"],ans:0,expl:"Le compte 6811 « Dotations aux amortissements des immobilisations corporelles et incorporelles » est débité pour constater la charge d'amortissement de l'exercice. En contrepartie, on crédite le compte 28x correspondant à l'immobilisation concernée."},
       {q:"Quand commence l'amortissement d'une immobilisation ?",opts:["À la date de paiement","À la mise en service","À la clôture de l'exercice","À la date de la facture"],ans:1,expl:"L'amortissement comptable débute à la date de mise en service de l'immobilisation, c'est-à-dire lorsqu'elle est prête à être utilisée. Cette date peut être différente de la date d'acquisition ou de facture."},
       {q:"Quelle est la base amortissable d'un bien ?",opts:["Coût d'achat + frais financiers","Prix de vente - TVA","Valeur brute - amortissements cumulés","Coût d'acquisition - valeur résiduelle"],ans:3,expl:"Base amortissable = Coût d'acquisition (valeur d'entrée HT) – Valeur résiduelle. Le coût d'acquisition comprend le prix d'achat, les frais de livraison, d'installation, etc. La valeur résiduelle n'est déduite que si elle est significative et que la cession est probable."},
-      {q:"Une immobilisation d'une valeur d'entrée de 10 000 € sera utilisée pendant 5 ans. Quelle est la dotation aux amortissements pour une année pleine ?",opts:["2 000","20 000","2 000 €","2 000 euros par an"],ans:0,expl:"Dotation annuelle linéaire = Valeur d'entrée / Durée = 10 000 / 5 = 2 000 € par an. La réponse est 2 000 (toutes les formulations correctes désignent la même valeur)."},
+      {q:"Une immobilisation d'une valeur d'entrée de 10 000 € sera utilisée pendant 5 ans. Quelle est la dotation aux amortissements pour une année pleine ?",opts:["2 000 €","20 000 €","1 000 €","5 000 €"],ans:0,expl:"Dotation annuelle linéaire = Valeur d'entrée / Durée = 10 000 / 5 = 2 000 € par an. La réponse est 2 000 (toutes les formulations correctes désignent la même valeur)."},
       {q:"Cette même immobilisation est mise en service le 1er juillet. Quelle est la dotation aux amortissements pour la première année ?",opts:["1 000","1000","2 000","833"],ans:0,expl:"Prorata temporis : mise en service le 1er juillet → 6 mois restants (juillet à décembre). Dotation N1 = 2 000 × 6/12 = 1 000 €. Le calcul se fait en mois entiers à partir de la date de mise en service."},
       {q:"Qu'est-ce que la VNC d'une immobilisation ?",opts:["Son coût d'acquisition","Sa valeur de revente","Sa valeur d'entrée diminuée du cumul des amortissements","La dotation aux amortissements de l'exercice"],ans:2,expl:"VNC (Valeur Nette Comptable) = Valeur d'entrée – Amortissements cumulés. Elle représente la valeur résiduelle de l'immobilisation au bilan après déduction de tous les amortissements pratiqués depuis la mise en service."},
       {q:"Immobilisation : 8 000 €, amortissement cumulé 3 500 €. VNC ?",opts:["8 000 €","3 500 €","11 500 €","4 500 €"],ans:3,expl:"VNC = Valeur d'entrée – Amortissements cumulés = 8 000 – 3 500 = 4 500 €. C'est la valeur qui apparaît à l'actif du bilan dans la colonne « Net »."},
