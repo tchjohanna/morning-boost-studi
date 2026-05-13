@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Bibliothèque de Révision — Titre Pro Gestionnaire Comptable</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-logo">révision<span>.</span>compta</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPage('accueil')">Accueil</button>
+    <button class="nav-tab" onclick="showPage('boosts')">Morning Boosts</button>
+    <button class="nav-tab" onclick="showPage('biblio')">Bibliothèque</button>
+  </div>
+</nav>
+
+<!-- PAGE ACCUEIL -->
+<div class="page active" id="page-accueil">
+  <div class="hero">
+    <div class="hero-date" id="hero-date"></div>
+    <h1>Bonjour ! Prête à <span>réviser</span> ?</h1>
+    <p>Titre professionnel gestionnaire comptable et fiscal — suivi de ta progression quotidienne.</p>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-card"><div class="stat-label">Boosts complétés</div><div class="stat-value accent" id="stat-total">0</div></div>
+    <div class="stat-card"><div class="stat-label">Meilleur score</div><div class="stat-value gold" id="stat-best">—</div></div>
+    <div class="stat-card"><div class="stat-label">Score moyen</div><div class="stat-value green" id="stat-avg">—</div></div>
+    <div class="stat-card"><div class="stat-label">Thèmes joués</div><div class="stat-value accent" id="stat-uniq">0</div></div>
+  </div>
+  <div class="section-title">Historique des morning boosts</div>
+  <div class="boost-history" id="boost-history">
+    <div class="boost-empty">Aucun boost complété pour l'instant — lance ton premier !</div>
+  </div>
+</div>
+
+<!-- PAGE MORNING BOOSTS -->
+<div class="page" id="page-boosts">
+  <h2 class="page-title">Morning Boosts ⚡</h2>
+  <p class="page-sub">Tous tes quiz du matin — clique sur une carte pour commencer.</p>
+  <div class="boost-grid" id="boost-grid"></div>
+</div>
+
+<!-- PAGE BIBLIOTHÈQUE -->
+<div class="page" id="page-biblio">
+  <h2 class="page-title">Bibliothèque 📚</h2>
+  <p class="page-sub">Tous tes outils de révision — cours interactifs, quiz et cas pratiques.</p>
+  <div class="lib-grid">
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">📦</div><span class="lib-badge badge-cours">Cours</span></div>
+      <h3>Variations de stocks — Généralités</h3>
+      <p>Inventaire intermittent vs permanent, évaluation des stocks, principes PCG.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">Classe 3</span><span class="lib-topic">Inventaire</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">📦</div><span class="lib-badge badge-cours">Cours</span></div>
+      <h3>Variations de stocks — Écritures</h3>
+      <p>Suppression des SI, création des SF, comptes 603 et 713, compte de résultat et bilan.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">603</span><span class="lib-topic">713</span><span class="lib-topic">Bilan</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">🏭</div><span class="lib-badge badge-cours">Cours</span></div>
+      <h3>Amortissements — Terminologie & Linéaire</h3>
+      <p>Valeur brute, VNC, durée d'utilité, plan d'amortissement, prorata temporis.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">Classe 2</span><span class="lib-topic">6811</span><span class="lib-topic">28x</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">👥</div><span class="lib-badge badge-cours">Cours</span></div>
+      <h3>Charges de personnel</h3>
+      <p>Bulletin de paie, brut / net, cotisations salariales et patronales, comptes 641, 421, 431.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">641</span><span class="lib-topic">421</span><span class="lib-topic">URSSAF</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">🏦</div><span class="lib-badge badge-cours">Cours</span></div>
+      <h3>Rapprochement bancaire</h3>
+      <p>État de rapprochement, écarts de décalage, erreurs comptables, compte 512.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">512</span><span class="lib-topic">État rapp.</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">❓</div><span class="lib-badge badge-quiz">Quiz</span></div>
+      <h3>Quiz Comptabilité Générale — 40 questions</h3>
+      <p>Comptes, principes PCG, documents de synthèse, classes 1 à 7.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">40 Q</span><span class="lib-topic">PCG</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">🎮</div><span class="lib-badge badge-cas">Cas pratique</span></div>
+      <h3>Cas Starserv</h3>
+      <p>Coût d'achat et coût de production — cas gamifié sur les palettes en bois Eastwood.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">Coût achat</span><span class="lib-topic">Coût prod.</span></div>
+        <a href="#" class="lib-link">Ouvrir →</a>
+      </div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-card-top"><div class="lib-card-icon">🎵</div><span class="lib-badge badge-cours">À venir</span></div>
+      <h3>Chanson TVA — style Stromae</h3>
+      <p>Mémorisation des règles TVA par la musique — en attente des supports de cours.</p>
+      <div class="lib-card-footer">
+        <div class="lib-topics"><span class="lib-topic">44571</span><span class="lib-topic">CA3</span></div>
+        <span style="font-size:0.78rem;color:var(--text-dim)">Bientôt...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ OVERLAY -->
+<div class="quiz-overlay" id="quiz-overlay">
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <button class="quiz-back" onclick="closeQuiz()">← Retour</button>
+      <div>
+        <div class="quiz-title" id="quiz-title"></div>
+        <div class="quiz-subtitle" id="quiz-subtitle"></div>
+      </div>
+    </div>
+    <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress"></div></div>
+    <div id="quiz-question-view">
+      <div class="quiz-q-num" id="quiz-q-num"></div>
+      <div class="quiz-question" id="quiz-question"></div>
+      <div class="quiz-options" id="quiz-options"></div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+      <button class="quiz-btn quiz-btn-validate" id="btn-validate" onclick="validateAnswer()" disabled>Valider</button>
+      <button class="quiz-btn quiz-btn-next" id="btn-next" onclick="nextQuestion()" style="display:none">Question suivante →</button>
+    </div>
+    <div id="quiz-results-view" style="display:none">
+      <div class="quiz-results">
+        <div class="result-emoji" id="result-emoji"></div>
+        <div class="result-score" id="result-score"></div>
+        <div class="result-label" id="result-label"></div>
+        <div class="result-breakdown">
+          <span class="rb-green" id="rb-correct"></span>
+          <span class="rb-red" id="rb-wrong"></span>
+        </div>
+        <div class="result-actions">
+          <button class="result-btn result-btn-primary" onclick="retryQuiz()">Recommencer</button>
+          <button class="result-btn result-btn-secondary" onclick="closeQuiz()">Terminer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
