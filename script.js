@@ -1,3 +1,4 @@
+
 // ══════════════════════════════════════════════════════════════════
 //  BANQUE DE MORNING BOOSTS
 //  ─────────────────────────────────────────────────────────────────
@@ -155,15 +156,25 @@ const BOOSTS = [
     color:"#f76ab0",
     questions:[
       {q:"Qu'est-ce qu'une balance comptable ?",opts:["Un relevé bancaire mensuel","Un instrument de contrôle et source d'informations","Un document obligatoire comme le bilan","Un registre des factures fournisseurs"],ans:1,expl:"La balance est un instrument de contrôle et source d'informations. Elle n'est pas obligatoire, mais très utile."},
+      
       {q:"La balance comptable est-elle un document obligatoire ?",opts:["Non, et elle est rarement utilisée","Oui, au même titre que le journal","Oui, uniquement pour les SA","Non, mais elle est très utile"],ans:3,expl:"La balance n'est pas obligatoire, mais très utile pour suivre et réviser la comptabilité."},
+      
       {q:"Quel principe la balance permet-elle de vérifier ?",opts:["Le principe de prudence","Le principe de permanence des méthodes","Le principe de continuité","Le principe de la partie double"],ans:3,expl:"La balance vérifie que le total des débits = total des crédits — c'est le principe de la partie double."},
+      
       {q:"Qu'indique la balance pour chaque compte ?",opts:["Le détail de chaque facture","Les mouvements et le solde de chaque compte","Uniquement le solde débiteur","Uniquement les débits"],ans:1,expl:"La balance fournit les mouvements et le solde de chaque compte utilisé."},
+      
       {q:"Comment les comptes sont-ils classés dans une balance générale ?",opts:["Par ordre décroissant","Par ordre chronologique","Par ordre croissant de numéro de compte","Par ordre alphabétique"],ans:2,expl:"Les comptes sont classés par ordre croissant de numéro, de la classe 1 vers les classes supérieures."},
+      
       {q:"Quel document est établi avant la balance dans la chaîne comptable ?",opts:["Le Grand Livre","La déclaration de TVA","Le bilan","Le compte de résultat"],ans:0,expl:"La chaîne est : Journal → Grand Livre → Balance → Bilan & Résultat."},
+      
       {q:"Dans une balance complète, le total des débits est égal à :",opts:["Le double du total des crédits","Le résultat net","La moitié du total des crédits","Le total des crédits"],ans:3,expl:"Par le principe de la partie double, total débits = total crédits dans toute balance complète."},
+      
       {q:"Dans le Grand Livre, les montants débités s'inscrivent :",opts:["À droite du compte","Au centre","À gauche du compte","En bas"],ans:2,expl:"Dans le Grand Livre, la page de gauche accueille les débits, la droite les crédits."},
+      
       {q:"Que signifie RAN dans le Grand Livre ?",opts:["Résultat À Neutraliser","Résultat Annuel Net","Report À Nouveau","Registre À Numéroter"],ans:2,expl:"RAN = Report À Nouveau. C'est le solde reporté d'un exercice à l'autre."},
-      {q:"De quel côté inscrit-on le solde débiteur dans un compte en T ?",opts:["Il n'apparaît pas","Des deux côtés","Du côté crédit","Du côté débit"],ans:2,expl:"Le solde débiteur s'inscrit du côté crédit pour équilibrer le total — convention comptable."},
+      
+      {q:"Dans un compte en T équilibré, où inscrit-on le solde débiteur pour équilibrer les colonnes ?",opts:["Il n'apparaît pas","Des deux côtés","Du côté crédit","Du côté débit"],ans:2,expl:"Le solde débiteur s'inscrit du côté crédit pour équilibrer le total — convention comptable."},
+      
       {q:"Il existe combien de grandes catégories de balances ?",opts:["Deux : générales et âgées","Quatre","Trois","Une seule"],ans:0,expl:"Il existe deux grandes catégories : la balance générale et la balance âgée."},
       {q:"Sur quel critère la balance âgée répartit-elle les montants ?",opts:["Le montant des factures","La date d'échéance de la créance ou de la dette","La nature des produits","Le secteur géographique"],ans:1,expl:"La balance âgée répartit les montants selon la date d'échéance de chaque créance ou dette."},
       {q:"À quoi sert principalement une balance âgée ?",opts:["Calculer le résultat","Contrôler les déclarations de TVA","Établir les fiches de paie","Anticiper l'état de la trésorerie"],ans:3,expl:"La balance âgée permet d'anticiper l'état de la trésorerie à venir."},
@@ -310,16 +321,16 @@ const BOOSTS = [
     },
 
     {
-      q: "À la réception d’une facture d’achat d'importation, la TVA est généralement :",
-      opts: [
-        "Jamais comptabilisée",
-        "Toujours payée à l’État d’origine",
-        "Comptabilisée uniquement en charge",
-        "Déduite et collectée en même temps"
-      ],
-      ans: 3,
-      expl: "La TVA d'importation peut être autoliquidée avec TVA collectée et déductible simultanément."
-    },
+  q: "À la réception d’une facture d’achat d'importation, la TVA est généralement :",
+  opts: [
+    "Jamais comptabilisée",
+    "Toujours payée à l’État d’origine",
+    "Comptabilisée uniquement en charge",
+    "Autoliquidée avec TVA due et TVA déductible"
+  ],
+  ans: 3,
+  expl: "La TVA d'importation peut être autoliquidée avec enregistrement simultané d'une TVA due et d'une TVA déductible."
+},
 
     {
       q: "Une exportation de biens vers le Canada est en principe :",
@@ -353,7 +364,9 @@ const BOOSTS = [
     label:"TVA & Calculs", sub:"Taux, HT/TTC, comptes 44562/44566/44571, franchise",
     color:"#ff4d6d",
     questions:[
-      {q:"Une facture mentionne 1 000 € HT et TVA 20 %. Quel est le montant TTC ?",opts:["1 200 €","1 020 €","1 002 €","1 100 €"],ans:0,expl:"TVA = 1 000 × 20 % = 200 €. Montant TTC = 1 000 + 200 = 1 200 €. Le TTC est toujours le montant que paye réellement le client, TVA incluse."},
+      {q:"Une facture mentionne 1 000 € HT et TVA 20 %. Quel est le montant TTC ?",opts:["1 200 €","1 020 €","1 002 €","1 100 €"],ans:0,expl:"TVA = 1 000 × 20 % = 200 €. Montant TTC = 1 000 + 200 = 1 200 €. Le TTC correspond au montant facturé au client, TVA incluse."},
+      
+      
       {q:"Une entreprise perçoit 600 € TTC (TVA 20 %). Quel est le montant HT ?",opts:["500 €","480 €","580 €","520 €"],ans:0,expl:"Pour retrouver le HT depuis le TTC : 600 / 1,20 = 500 €. La TVA est donc de 100 €. Diviser par 1,20 est le réflexe à avoir pour un taux de 20 %."},
       {q:"Qui collecte la TVA et la reverse à l'État ?",opts:["L'assujetti vendeur","La banque","L'expert-comptable","Le client final"],ans:0,expl:"C'est l'assujetti vendeur (l'entreprise) qui collecte la TVA auprès de ses clients et la reverse ensuite à l'État, déduction faite de la TVA déductible sur ses propres achats."},
       {q:"Un médecin libéral réalise des consultations. Ses honoraires sont-ils soumis à TVA ?",opts:["Oui, au taux de 10 %","Non, les soins médicaux sont exonérés","Oui, au taux de 20 %","Oui, au taux de 5,5 %"],ans:1,expl:"Les actes médicaux et soins dispensés par les membres des professions médicales sont exonérés de TVA. Le médecin ne collecte pas de TVA et ne peut pas non plus déduire la TVA sur ses achats."},
@@ -618,18 +631,50 @@ const BOOSTS = [
     color:"#e040fb",
     questions:[
       {q:"Quel compte utiliser pour constater une dotation aux amortissements ?",opts:["6811","6816","281","512"],ans:0,expl:"Le compte 6811 « Dotations aux amortissements des immobilisations corporelles et incorporelles » est débité pour constater la charge d'amortissement de l'exercice. En contrepartie, on crédite le compte 28x correspondant à l'immobilisation concernée."},
+      
       {q:"Quand commence l'amortissement d'une immobilisation ?",opts:["À la date de paiement","À la mise en service","À la clôture de l'exercice","À la date de la facture"],ans:1,expl:"L'amortissement comptable débute à la date de mise en service de l'immobilisation, c'est-à-dire lorsqu'elle est prête à être utilisée. Cette date peut être différente de la date d'acquisition ou de facture."},
+      
+      
       {q:"Quelle est la base amortissable d'un bien ?",opts:["Coût d'achat + frais financiers","Prix de vente - TVA","Valeur brute - amortissements cumulés","Coût d'acquisition - valeur résiduelle"],ans:3,expl:"Base amortissable = Coût d'acquisition (valeur d'entrée HT) – Valeur résiduelle. Le coût d'acquisition comprend le prix d'achat, les frais de livraison, d'installation, etc. La valeur résiduelle n'est déduite que si elle est significative et que la cession est probable."},
+      
+      
       {q:"Une immobilisation d'une valeur d'entrée de 10 000 € sera utilisée pendant 5 ans. Quelle est la dotation aux amortissements pour une année pleine ?",opts:["2 000 €","20 000 €","1 000 €","5 000 €"],ans:0,expl:"Dotation annuelle linéaire = Valeur d'entrée / Durée = 10 000 / 5 = 2 000 € par an. La réponse est 2 000 (toutes les formulations correctes désignent la même valeur)."},
-      {q:"Cette même immobilisation est mise en service le 1er juillet. Quelle est la dotation aux amortissements pour la première année ?",opts:["1 000","1000","2 000","833"],ans:0,expl:"Prorata temporis : mise en service le 1er juillet → 6 mois restants (juillet à décembre). Dotation N1 = 2 000 × 6/12 = 1 000 €. Le calcul se fait en mois entiers à partir de la date de mise en service."},
+      
+      
+      {
+  q:"Cette même immobilisation est mise en service le 1er juillet. Quelle est la dotation aux amortissements pour la première année ?",
+  opts:["1 000 €","2 000 €","833 €","500 €"],
+  ans:0,
+  expl:"Prorata temporis : mise en service le 1er juillet → 6 mois d'utilisation sur l'exercice (juillet à décembre). Dotation N1 = 2 000 × 6/12 = 1 000 €."
+},
+      
+      
       {q:"Qu'est-ce que la VNC d'une immobilisation ?",opts:["Son coût d'acquisition","Sa valeur de revente","Sa valeur d'entrée diminuée du cumul des amortissements","La dotation aux amortissements de l'exercice"],ans:2,expl:"VNC (Valeur Nette Comptable) = Valeur d'entrée – Amortissements cumulés. Elle représente la valeur résiduelle de l'immobilisation au bilan après déduction de tous les amortissements pratiqués depuis la mise en service."},
+      
+      
       {q:"Immobilisation : 8 000 €, amortissement cumulé 3 500 €. VNC ?",opts:["8 000 €","3 500 €","11 500 €","4 500 €"],ans:3,expl:"VNC = Valeur d'entrée – Amortissements cumulés = 8 000 – 3 500 = 4 500 €. C'est la valeur qui apparaît à l'actif du bilan dans la colonne « Net »."},
       {q:"Après 3 ans, un bien de 9 000 € amorti linéairement sur 6 ans vaut combien de VNC ?",opts:["3 000 €","6 000 €","1 500 €","4 500 €"],ans:3,expl:"Annuité = 9 000 / 6 = 1 500 € par an. Après 3 ans : amortissements cumulés = 1 500 × 3 = 4 500 €. VNC = 9 000 – 4 500 = 4 500 €."},
+      
       {q:"Quelle est la valeur résiduelle d'une immobilisation ?",opts:["Le montant amorti cumulé","La valeur de revente estimée à la fin d'utilisation","La valeur nette comptable actuelle","Le coût total d'origine"],ans:1,expl:"La valeur résiduelle est la valeur de revente estimée du bien à la fin de sa durée d'utilité, nette des coûts de cession. Elle est déduite de la base amortissable comptable si elle est significative."},
+      
       {q:"Quelle est la valeur actuelle d'un actif ?",opts:["Sa valeur après amortissement comptable","Son prix d'achat historique","Son coût de remplacement uniquement","Sa valeur d'utilité ou de marché aujourd'hui"],ans:3,expl:"La valeur actuelle est la valeur la plus élevée entre la valeur vénale (prix de marché) et la valeur d'usage (valeur des flux de trésorerie attendus). C'est cette valeur actuelle qui est comparée à la VNC pour détecter une dépréciation."},
-      {q:"Une dépréciation d'immobilisation est constatée lorsque :",opts:["Elle est vendue","Sa VNC est supérieure à sa valeur actuelle","Elle est totalement amortie"],ans:1,expl:"Une dépréciation est constatée quand la VNC > Valeur actuelle. Cela signifie que l'immobilisation a perdu de la valeur au-delà de l'amortissement normal. La dépréciation = VNC – Valeur actuelle. Elle est comptabilisée au débit du 6816 et au crédit du 291."},
+      
+      {
+  q:"Une dépréciation d'immobilisation est constatée lorsque :",
+  opts:[
+    "Elle est vendue",
+    "Sa VNC est supérieure à sa valeur actuelle",
+    "Elle est totalement amortie",
+    "Sa valeur d'entrée augmente"
+  ],
+  ans:1,
+  expl:"Une dépréciation est constatée lorsque la VNC devient supérieure à la valeur actuelle du bien."
+},
+      
       {q:"Quel compte utiliser pour constater une dotation aux dépréciations ?",opts:["6811","6816","291","6815"],ans:1,expl:"La dotation aux dépréciations des immobilisations corporelles est enregistrée au débit du compte 6816 « Dotations aux dépréciations des immobilisations corporelles ». En contrepartie, on crédite le compte 291 « Dépréciations des immobilisations corporelles »."},
+      
       {q:"Immo : valeur d'entrée 12 000 € — VNC 8 000 € — Valeur actuelle (VA) 7 000 €. Dépréciation ?",opts:["4 000 €","5 000 €","1 000 €","0 €"],ans:2,expl:"Dépréciation = VNC – Valeur actuelle = 8 000 – 7 000 = 1 000 €. La valeur d'entrée (12 000 €) n'intervient pas dans ce calcul. On compare toujours VNC et valeur actuelle."},
+      
       {q:"Immo : valeur d'entrée 20 000 € — VNC 14 000 € — Valeur actuelle (VA) 16 000 €. Dépréciation ?",opts:["4 000 €","6 000 €","2 000 €","0 €"],ans:3,expl:"Valeur actuelle (16 000 €) > VNC (14 000 €) → pas de dépréciation ! On ne constate une dépréciation que si VNC > VA. Ici la valeur actuelle est supérieure à la VNC, donc le bien n'est pas déprécié. Dépréciation = 0 €."}
     ]
   },
@@ -640,17 +685,40 @@ const BOOSTS = [
     color:"#7c3aed",
     questions:[
       {q:"Quel est l'objectif principal de l'amortissement comptable ?",opts:["Réduire l'impôt","Répartir le coût d'un actif sur sa durée d'utilisation","Répartir la sortie de trésorerie sur la durée d'utilisation","Constater une charge exceptionnelle"],ans:1,expl:"L'amortissement comptable a pour objectif de répartir le coût d'un actif sur sa durée d'utilisation attendue, conformément au principe de rattachement des charges aux produits. Il ne s'agit pas de la trésorerie décaissée, mais du coût économique de l'usage du bien."},
+      
       {q:"Quel compte enregistre la dotation aux amortissements comptables ?",opts:["281 (Amortissement des immobilisations)","6811 (Dotations aux amortissements)","6815 (Dotations aux dépréciations)","6816 (Dotations aux dépréciations financières)"],ans:1,expl:"La dotation aux amortissements comptables est enregistrée au débit du compte 6811 « Dotations aux amortissements des immobilisations corporelles et incorporelles ». En contrepartie, on crédite le compte 28x correspondant à l'immobilisation."},
-      {q:"Quel compte enregistre la dotation aux amortissements fiscaux ?",opts:["145 (Amortissements dérogatoires)","6811 (Dotations aux amortissements)","68725 (Dotation aux amortissements dérogatoires)","Aucun — il n'y a pas de compte fiscal"],ans:3,expl:"Il n'existe pas de compte de charge spécifique pour les amortissements fiscaux en tant que tels. L'amortissement fiscal correspond soit à l'amortissement comptable (6811), soit à la partie dérogatoire qui est enregistrée via le compte 68725, selon que l'on parle de la base ou du surplus fiscal."},
+      
+      {
+  q:"Existe-t-il un compte spécifique réservé uniquement aux amortissements fiscaux ?",
+  opts:[
+    "145 (Amortissements dérogatoires)",
+    "6811 (Dotations aux amortissements)",
+    "68725 (Dotation aux amortissements dérogatoires)",
+    "Aucun — il n'y a pas de compte fiscal"
+  ],
+  ans:3,
+  expl:"Il n'existe pas de compte de charge spécifique réservé uniquement aux amortissements fiscaux. L'amortissement fiscal correspond soit à l'amortissement comptable (6811), soit à la partie dérogatoire enregistrée via le compte 68725."
+},
+      
       {q:"Quel compte enregistre la dotation aux amortissements dérogatoires ?",opts:["145 (Amortissements dérogatoires)","6811 (Dotations aux amortissements)","68725 (Dotation aux amortissements dérogatoires)","Aucun"],ans:2,expl:"La dotation aux amortissements dérogatoires est enregistrée au débit du compte 68725 « Dotation aux amortissements dérogatoires » en contrepartie du crédit du compte 145 « Amortissements dérogatoires » au passif du bilan (provisions réglementées)."},
+      
+      
       {q:"Dans une écriture d'amortissement, on crédite :",opts:["28 (Amortissement de l'immobilisation)","6811 (Dotations aux amortissements)","512 (Banque)","29 (Dépréciations des immobilisations)"],ans:0,expl:"Dans l'écriture d'amortissement : on débite le 6811 (charge) et on crédite le compte 28x (amortissement cumulé de l'immobilisation). Le compte 28x est un compte de bilan qui vient soustraire la valeur brute pour obtenir la VNC."},
+      
       {q:"Quel est le principe du dégressif ?",opts:["Charge constante","Charge plus élevée au début","Charge aléatoire","Charge uniquement en fin de vie"],ans:1,expl:"L'amortissement dégressif génère une charge plus élevée en début de vie, qui décroît chaque année. La dotation = VNC × taux dégressif. La VNC diminuant chaque année, la dotation diminue aussi. Cela reflète la perte de valeur plus rapide en début d'utilisation."},
+      
       {q:"En amortissement comptable, quelle est la base amortissable ?",opts:["Le prix d'achat TTC","Le prix d'achat TTC – valeur résiduelle","Le prix d'achat HT – valeur résiduelle","Le prix d'achat HT"],ans:2,expl:"La base amortissable comptable = Prix d'achat HT (coût d'acquisition ou coût de production) – valeur résiduelle. Attention : la base est sur la valeur d'entrée HT (coût d'acquisition = prix d'achat HT + frais de livraison, d'installation…). La valeur résiduelle est déduite seulement si elle est significative et que la cession est probable."},
+      
       {q:"La date de début de l'amortissement comptable correspond :",opts:["À la date de facture","À la date de commande","À la date de paiement","À la date de mise en service"],ans:3,expl:"L'amortissement comptable débute à la date de mise en service, c'est-à-dire quand le bien est prêt à être utilisé. Cette date peut être différente de la date d'acquisition ou de facture."},
+      
       {q:"En amortissement fiscal, la valeur résiduelle est :",opts:["Toujours déduite","Déduite seulement en linéaire","Jamais déduite","Déduite seulement en dégressif"],ans:2,expl:"En fiscal, la valeur résiduelle n'est JAMAIS déduite de la base amortissable. La base fiscale = valeur d'acquisition HT, sans déduction de valeur résiduelle. C'est une différence fondamentale avec le traitement comptable."},
+      
       {q:"En amortissement fiscal dégressif, le point de départ est :",opts:["La mise en service","La fin d'exercice","La date de facture / acquisition","La date de paiement"],ans:2,expl:"En dégressif fiscal, le calcul démarre à la date de facture ou d'acquisition (et non à la mise en service comme en comptable). C'est une règle fiscale spécifique : CGI art. 39 B."},
+      
       {q:"L'amortissement en unités d'œuvre est :",opts:["Interdit","Comptable et fiscal","Fiscal uniquement","Comptable uniquement"],ans:3,expl:"L'amortissement par unités d'œuvre (ou d'activité) est une méthode comptable uniquement. Elle n'est pas reconnue fiscalement. Fiscalement, on ne peut utiliser que le linéaire ou le dégressif. La méthode par unités d'œuvre est adaptée aux biens dont l'usage est irrégulier (machines industrielles, véhicules…)."},
+      
       {q:"Un bien a une valeur résiduelle significative. Quel impact sur l'amortissement comptable ?",opts:["Supprime l'amortissement","N'a aucun impact","Diminue l'amortissement comptable","Augmente l'amortissement fiscal"],ans:2,expl:"Une valeur résiduelle significative réduit la base amortissable comptable : Base = Valeur d'entrée HT – Valeur résiduelle. Conséquence : la dotation annuelle est plus faible. En fiscal en revanche, la valeur résiduelle n'est jamais déduite."},
+      
       {q:"Un amortissement dérogatoire apparaît lorsque :",opts:["Il y a une perte","Comptable > fiscal","Fiscal > comptable","Les deux sont égaux"],ans:2,expl:"L'amortissement dérogatoire (compte 145) est constaté quand l'amortissement fiscal dépasse l'amortissement comptable. On enregistre la différence (fiscal - comptable) au débit du 68725 et au crédit du 145. Quand la situation s'inverse, on reprend l'amortissement dérogatoire (débit 145 / crédit 78725)."},
       {q:"Un amortissement dérogatoire peut apparaître :",opts:["Seulement si fiscal > comptable la première année","Uniquement en linéaire","Seulement en fin de vie","À tout moment"],ans:0,expl:"L'amortissement dérogatoire n'apparaît que lorsque l'amortissement fiscal est supérieur à l'amortissement comptable. En pratique, cela se produit surtout la première année avec le dégressif fiscal (qui part de la date d'acquisition) versus le linéaire comptable (qui part de la mise en service)."},
       {q:"Pourquoi le dégressif est-il avantageux fiscalement ?",opts:["Il accélère les charges au début","Il supprime l'impôt","Il réduit le résultat en fin de période","Il augmente les capitaux propres"],ans:0,expl:"Le dégressif génère des charges plus élevées en début de vie, ce qui réduit le résultat fiscal et donc l'impôt à payer à court terme. C'est un avantage de trésorerie (différé d'imposition), et non une exonération définitive."},
@@ -786,18 +854,66 @@ const BOOSTS = [
     color:"#5b4dff",
     questions:[
       {q:"Dans une écriture d'amortissement comptable, on crédite :",opts:["28 (Amortissement de l'immobilisation)","6811 (Dotations aux amortissements)","512 (Banque)","29 (Dépréciations)"],ans:0,expl:"Dans l'écriture comptable d'amortissement, on débite le 6811 « Dotations aux amortissements des immobilisations corporelles » et on crédite le compte 28x « Amortissement de l'immobilisation ». Le compte 28 vient diminuer la valeur brute de l'actif au bilan."},
+      
+      
       {q:"Quel compte enregistre la dotation aux amortissements dérogatoires ?",opts:["145 (Amortissements dérogatoires — passif)","6811 (Dotations aux amortissements)","68725 (Dotation aux amortissements dérogatoires)","Aucun compte spécifique"],ans:2,expl:"La dotation aux amortissements dérogatoires est enregistrée au débit du compte 68725 « Dotation aux amortissements dérogatoires » en contrepartie du crédit du compte 145 « Amortissements dérogatoires » au passif du bilan."},
+      
+      
       {q:"La date de début de l'amortissement comptable correspond :",opts:["À la date de facture","À la date de paiement","À la date de commande","À la date de mise en service"],ans:3,expl:"L'amortissement comptable débute à la date de mise en service du bien, c'est-à-dire lorsque l'immobilisation est prête à être utilisée. Cette date peut être postérieure à la date d'acquisition ou de facture."},
+      
+      
       {q:"En amortissement fiscal dégressif, le point de départ est :",opts:["La mise en service","La fin d'exercice","La date de paiement","La date de facture / acquisition"],ans:3,expl:"En amortissement fiscal dégressif, le point de départ est la date de facture ou d'acquisition (et non la mise en service comme en comptable). C'est une règle fiscale spécifique qui diffère du traitement comptable."},
+      
+      
+      
       {q:"Quel est le principe du dégressif ?",opts:["Charge constante","Charge plus élevée au début","Charge aléatoire","Charge uniquement en fin de vie"],ans:1,expl:"L'amortissement dégressif génère une charge plus élevée en début de vie de l'immobilisation, qui diminue progressivement. Cela traduit l'idée que les biens perdent davantage de valeur en début d'utilisation."},
+      
+      
+      
       {q:"En amortissement fiscal, la valeur résiduelle est :",opts:["Toujours déduite","Déduite seulement en linéaire","Jamais déduite","Déduite seulement en dégressif"],ans:2,expl:"En amortissement fiscal, la valeur résiduelle n'est jamais déduite de la base amortissable. En comptable en revanche, si l'entreprise envisage de céder le bien à une valeur résiduelle significative, celle-ci peut être déduite de la base amortissable."},
+      
+      
       {q:"En amortissement fiscal dégressif, le point de départ est :",opts:["La mise en service","La fin d'exercice","La date de facture / acquisition","La date de paiement"],ans:2,expl:"Rappel : en dégressif fiscal, le point de départ est toujours la date de facture / acquisition, contrairement à l'amortissement comptable qui débute à la mise en service."},
+      
+      
       {q:"Un amortissement dérogatoire apparaît lorsque :",opts:["Il y a une perte","Comptable > fiscal","Fiscal > comptable","Les deux sont égaux"],ans:2,expl:"Un amortissement dérogatoire naît lorsque l'amortissement fiscal est supérieur à l'amortissement comptable. La différence (fiscal - comptable) est comptabilisée en amortissement dérogatoire au passif (compte 145). Quand la situation s'inverse, l'amortissement dérogatoire est repris."},
-      {q:"Un amortissement dérogatoire peut apparaître :",opts:["Seulement si fiscal > comptable la première année","Uniquement en linéaire","Seulement en fin de vie","À tout moment"],ans:0,expl:"L'amortissement dérogatoire n'apparaît que lorsque l'amortissement fiscal dépasse l'amortissement comptable, ce qui se produit typiquement la première année avec le dégressif (car le dégressif part de la date d'acquisition et génère une dotation plus forte que le linéaire comptable)."},
-      {q:"Bien acquis le 15/06 et mis en service le 15/07. Prorata temporis de la première dotation en linéaire fiscal :",opts:["165/360","7/12","6/12","195/360"],ans:0,expl:"En linéaire fiscal, le prorata temporis se calcule en jours sur 360. Le bien est acquis le 15/06 : il reste 15 jours en juin + 150 jours jusqu'au 31/12 = 165 jours. Prorata = 165/360. Attention : en linéaire fiscal on part de la date d'acquisition, et le calcul est en jours (360 jours)."},
-      {q:"Bien acquis le 15/06 et mis en service le 15/07. Prorata temporis de la première dotation en dégressif :",opts:["165/360","7/12","6/12","195/360"],ans:1,expl:"En dégressif, le prorata temporis se calcule en mois (et non en jours). Le bien est acquis le 15/06 : on compte les mois restants à partir du 1er du mois suivant l'acquisition, soit juillet à décembre = 7 mois (règle du mois de l'acquisition non compté en totalité mais arrondi au demi-mois supérieur si acquisition après le 15). Prorata = 7/12."},
+      
+      {
+  q:"Un amortissement dérogatoire peut apparaître :",
+  opts:[
+    "Lorsque l'amortissement fiscal devient supérieur au comptable",
+    "Uniquement en linéaire",
+    "Seulement en fin de vie",
+    "Jamais"
+  ],
+  ans:0,
+  expl:"L'amortissement dérogatoire apparaît lorsque l'amortissement fiscal dépasse l'amortissement comptable."
+},
+      
+  {
+  q:"Bien acquis le 15/06 et mis en service le 15/07. Prorata temporis de la première dotation en dégressif :",
+  opts:["165/360","7/12","6/12","195/360"],
+  ans:1,
+  expl:"En amortissement dégressif fiscal, le prorata temporis se calcule en mois à partir du mois d'acquisition. Ici, le bien est acquis le 15/06 : la première annuité retient 7 mois sur 12 selon la règle fiscale appliquée en dégressif."
+},
+      
+     
+      
       {q:"Quand doit-on basculer du dégressif au linéaire ?",opts:["Quand le linéaire devient supérieur","Jamais","Quand la VNC = 0","À la fin"],ans:0,expl:"En amortissement dégressif, on bascule vers le linéaire calculé sur la durée restante dès que l'annuité linéaire (calculée sur VNC / années restantes) devient supérieure à l'annuité dégressive. C'est une règle obligatoire pour ne jamais avoir de VNC résiduelle."},
-      {q:"En dégressif, la base de calcul est :",opts:["Toujours la valeur d'entrée","La valeur résiduelle","La valeur nette comptable","Le prix TTC"],ans:2,expl:"En amortissement dégressif, la base de calcul est la Valeur Nette Comptable (VNC) au début de chaque exercice, et non la valeur d'entrée comme en linéaire. C'est ce qui explique les annuités décroissantes au fil des années."},
+      
+      
+     {
+  q:"En dégressif, la base de calcul est :",
+  opts:[
+    "Toujours la valeur d'entrée",
+    "La valeur résiduelle",
+    "La valeur nette comptable restante",
+    "Le prix TTC"
+  ],
+  ans:2,
+  expl:"En amortissement dégressif, la base de calcul correspond à la valeur nette comptable restante au début de chaque exercice. La dotation diminue progressivement au fil des années."
+},
+      
       {q:"Deux entreprises ont le même bien. Lequel reflète mieux la réalité si l'usage est irrégulier ?",opts:["Unités d'œuvre","Dégressif fiscal","Aucun des deux","Linéaire comptable"],ans:0,expl:"La méthode des unités d'œuvre (ou d'activité) est la plus pertinente pour un bien dont l'usage est irrégulier, car elle amortit le bien proportionnellement à son utilisation réelle (kilomètres, heures de marche, nombre de pièces produites…)."},
       {q:"Un amortissement fiscal plus rapide entraîne :",opts:["Moins d'impôt à court terme","Interdit","Plus d'impôt","Aucun impact"],ans:0,expl:"Un amortissement fiscal plus rapide (comme le dégressif) génère des charges fiscalement déductibles plus élevées en début de vie, ce qui réduit le résultat fiscal et donc l'impôt à court terme. C'est un avantage de trésorerie pour l'entreprise, même si l'impôt total sur toute la durée reste identique."}
     ]
@@ -911,7 +1027,7 @@ const BOOSTS = [
         "La dépense sert l’activité taxable"
       ],
       ans: 3,
-      expl: "La TVA est récupérable lorsque la dépense est liée à l’activité économique taxable."
+      expl: "La TVA est déductible lorsque la dépense est liée à l’activité économique taxable."
     },
 
     {
