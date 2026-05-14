@@ -154,3 +154,47 @@
     .topnav, .page { padding-left: 1rem; padding-right: 1rem; }
     .hero h1 { font-size: 1.4rem; }
   }
+
+/* NAVBAR MOBILE */
+@media (max-width: 700px){
+
+  .topnav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:1rem;
+  }
+
+  .nav-logo{
+    font-size:1.1rem;
+    flex-shrink:0;
+    max-width:45%;
+  }
+
+  .nav-tabs{
+    display:flex;
+    gap:.35rem;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  .nav-tab{
+    padding:.55rem .7rem;
+    font-size:.9rem;
+    white-space:nowrap;
+  }
+
+}
+.nav-tabs{
+  min-width:0;
+}
+
+//eviter que les textes débordent
+.boost-card-theme,
+.quiz-question,
+.quiz-option,
+.page-sub{
+  overflow-wrap:break-word;
+  word-break:break-word;
+}
