@@ -1223,7 +1223,7 @@ const BOOSTS = [
 //  MOTEUR — ne pas modifier en dessous
 // ──────────────────────────────────────────────
 
-const STORAGE_KEY = "revision_compta_v3";
+const STORAGE_KEY = "revision_compta_v4";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");}catch(e){return [];}}
 function saveHistory(h){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(h));}catch(e){}}
 
