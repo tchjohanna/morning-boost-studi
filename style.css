@@ -190,11 +190,4 @@
   min-width:0;
 }
 
-//eviter que les textes débordent
-.boost-card-theme,
-.quiz-question,
-.quiz-option,
-.page-sub{
-  overflow-wrap:break-word;
-  word-break:break-word;
-}
+
