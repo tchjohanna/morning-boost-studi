@@ -329,7 +329,7 @@ const BOOSTS = [
     "Autoliquidée avec TVA due et TVA déductible"
   ],
   ans: 3,
-  expl: "La TVA d'importation peut être autoliquidée avec enregistrement simultané d'une TVA due et d'une TVA déductible."
+  expl:"La TVA d'importation peut être autoliquidée avec enregistrement simultané d'une TVA collectée et d'une TVA déductible."
 },
 
     {
@@ -368,17 +368,35 @@ const BOOSTS = [
       
       
       {q:"Une entreprise perçoit 600 € TTC (TVA 20 %). Quel est le montant HT ?",opts:["500 €","480 €","580 €","520 €"],ans:0,expl:"Pour retrouver le HT depuis le TTC : 600 / 1,20 = 500 €. La TVA est donc de 100 €. Diviser par 1,20 est le réflexe à avoir pour un taux de 20 %."},
+      
       {q:"Qui collecte la TVA et la reverse à l'État ?",opts:["L'assujetti vendeur","La banque","L'expert-comptable","Le client final"],ans:0,expl:"C'est l'assujetti vendeur (l'entreprise) qui collecte la TVA auprès de ses clients et la reverse ensuite à l'État, déduction faite de la TVA déductible sur ses propres achats."},
+      
       {q:"Un médecin libéral réalise des consultations. Ses honoraires sont-ils soumis à TVA ?",opts:["Oui, au taux de 10 %","Non, les soins médicaux sont exonérés","Oui, au taux de 20 %","Oui, au taux de 5,5 %"],ans:1,expl:"Les actes médicaux et soins dispensés par les membres des professions médicales sont exonérés de TVA. Le médecin ne collecte pas de TVA et ne peut pas non plus déduire la TVA sur ses achats."},
+      
+      
       {q:"Quel taux de TVA s'applique aux livres papier et livres numériques ?",opts:["10 %","2,1 %","5,5 %","20 %"],ans:2,expl:"Les livres, qu'ils soient papier ou numériques, sont soumis au taux réduit de 5,5 %. C'est une exception notable car les produits numériques sont en général taxés à 20 %."},
-      {q:"Une entreprise achète du matériel de bureau pour 2 400 € TTC (TVA 20 %). Quel compte TVA débite-t-elle ?",opts:["44571 pour 400 €","44551 pour 400 €","44566 pour 400 €","44562 pour 400 €"],ans:3,expl:"Le matériel de bureau est une immobilisation. La TVA déductible est enregistrée au débit du compte 44562 « TVA déductible sur immobilisations ». TVA = 2 400 / 1,20 × 20 % = 400 €."},
+      
+         {q:"Une entreprise achète du mobilier de bureau pour 2 400 € TTC (TVA 20 %). Quel compte TVA débite-t-elle ?",opts:["44571 pour 400 €","44551 pour 400 €","44566 pour 400 €","44562 pour 400 €"],ans:3,expl:"Le matériel de bureau est une immobilisation. La TVA déductible est enregistrée au débit du compte 44562 « TVA déductible sur immobilisations ». TVA = 2 400 / 1,20 × 20 % = 400 €."},
+      
+      
       {q:"Une entreprise achète des fournitures de bureau pour 240 € TTC (TVA 20 %). Quel compte TVA ?",opts:["44566 pour 40 €","44551 pour 40 €","44571 pour 40 €","44562 pour 40 €"],ans:0,expl:"Les fournitures de bureau sont des charges courantes. La TVA déductible est enregistrée au débit du compte 44566 « TVA déductible sur autres biens et services ». TVA = 240 / 1,20 × 20 % = 40 €."},
+      
+      
       {q:"Qu'est-ce que la TVA collectée ?",opts:["La TVA payée sur les achats de l'entreprise","La TVA facturée par l'entreprise à ses clients","La TVA versée aux fournisseurs","La TVA remboursée par l'État"],ans:1,expl:"La TVA collectée est celle que l'entreprise facture à ses clients sur ses ventes. Elle est portée au crédit du compte 44571. C'est cette TVA que l'entreprise reverse ensuite à l'État, déduction faite de la TVA déductible."},
+      
+      
       {q:"Qu'est-ce que la TVA déductible ?",opts:["La TVA payée sur les achats et récupérée sur l'État","La TVA reversée à l'administration fiscale","La TVA applicable aux exportations","La TVA facturée aux clients"],ans:0,expl:"La TVA déductible est celle que l'entreprise a payée sur ses achats et qu'elle peut récupérer. Elle vient en déduction de la TVA collectée pour calculer la TVA à reverser à l'État."},
-      {q:"Une facture sans mention de TVA est-elle valable pour déduire la TVA ?",opts:["Oui, si le montant est inférieur à 150 €","Oui, si le fournisseur est connu","Oui, si le paiement est par virement","Non, la facture doit obligatoirement mentionner la TVA"],ans:3,expl:"Pour exercer le droit à déduction, l'assujetti doit obligatoirement détenir une facture régulière mentionnant le montant de TVA ou les éléments permettant de la calculer. Sans cette mention, la déduction est refusée."},
+      
+      
+      {q:"En règle générale, une facture sans mention de TVA permet-elle de déduire la TVA ?",opts:["Oui, si le montant est inférieur à 150 €","Oui, si le fournisseur est connu","Oui, si le paiement est par virement","Non, la facture doit obligatoirement mentionner la TVA"],ans:3,expl:"Pour exercer le droit à déduction, l'assujetti doit obligatoirement détenir une facture régulière mentionnant le montant de TVA ou les éléments permettant de la calculer. Sans cette mention, la déduction est refusée."},
+      
+      
       {q:"Qu'indique la mention « TVA non applicable, art. 293 B CGI » sur une facture ?",opts:["L'entreprise est exonérée définitivement de TVA","L'entreprise bénéficie de la franchise en base de TVA","L'opération est une exportation","L'entreprise est en redressement fiscal"],ans:1,expl:"Cette mention obligatoire signifie que l'entreprise est en franchise en base de TVA : son CA est inférieur au seuil légal, elle ne collecte donc pas de TVA. Elle ne peut pas non plus déduire la TVA sur ses propres achats."},
+      
       {q:"Le bilan comptable est divisé en deux grandes parties. Lesquelles ?",opts:["Charges et produits","Immobilisations et dettes","Emplois et ressources courantes","Actif et passif"],ans:3,expl:"Le bilan est divisé en deux colonnes : l'actif (ce que possède l'entreprise) et le passif (comment ces biens sont financés). Les deux colonnes sont toujours égales."},
+      
       {q:"Dans le bilan, où classe-t-on les dettes fournisseurs ?",opts:["Actif circulant","Passif – dettes","Passif – capitaux propres","Actif immobilisé"],ans:1,expl:"Les dettes fournisseurs (compte 401) figurent au passif du bilan, dans la rubrique dettes. Elles représentent une source de financement à court terme."},
+      
       {q:"Qu'est-ce que le résultat net dans le compte de résultat ?",opts:["La différence entre les produits et les charges","Le total des immobilisations","Le chiffre d'affaires de l'exercice","Le montant des capitaux propres"],ans:0,expl:"Résultat net = Total des produits − Total des charges. S'il est positif, c'est un bénéfice. S'il est négatif, c'est une perte. Ce résultat est ensuite repris au passif du bilan dans les capitaux propres."},
       {q:"Les achats de marchandises apparaissent-ils au bilan ou au compte de résultat ?",opts:["Au compte de résultat, en produits","Au bilan, au passif","Au bilan, à l'actif","Au compte de résultat, en charges"],ans:3,expl:"Les achats de marchandises (compte 607) sont des charges et figurent au compte de résultat, côté charges. Seuls les stocks restants à la clôture apparaissent au bilan à l'actif circulant."}
     ]
@@ -657,7 +675,16 @@ const BOOSTS = [
       
       {q:"Quelle est la valeur résiduelle d'une immobilisation ?",opts:["Le montant amorti cumulé","La valeur de revente estimée à la fin d'utilisation","La valeur nette comptable actuelle","Le coût total d'origine"],ans:1,expl:"La valeur résiduelle est la valeur de revente estimée du bien à la fin de sa durée d'utilité, nette des coûts de cession. Elle est déduite de la base amortissable comptable si elle est significative."},
       
-      {q:"Quelle est la valeur actuelle d'un actif ?",opts:["Sa valeur après amortissement comptable","Son prix d'achat historique","Son coût de remplacement uniquement","Sa valeur d'utilité ou de marché aujourd'hui"],ans:3,expl:"La valeur actuelle est la valeur la plus élevée entre la valeur vénale (prix de marché) et la valeur d'usage (valeur des flux de trésorerie attendus). C'est cette valeur actuelle qui est comparée à la VNC pour détecter une dépréciation."},
+      
+      
+      {q:"Quelle est la valeur actuelle d'un actif ?",opts:[
+"Sa valeur après amortissement comptable",
+"Son prix d'achat historique",
+"Son coût de remplacement uniquement",
+"La plus élevée entre sa valeur vénale et sa valeur d'usage"
+],ans:3,expl:"La valeur actuelle est la valeur la plus élevée entre la valeur vénale (prix de marché) et la valeur d'usage (valeur des flux de trésorerie attendus). C'est cette valeur actuelle qui est comparée à la VNC pour détecter une dépréciation."},
+      
+      
       
       {
   q:"Une dépréciation d'immobilisation est constatée lorsque :",
