@@ -1227,7 +1227,19 @@ const STORAGE_KEY = "revision_compta_v3";
 function loadHistory(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");}catch(e){return [];}}
 function saveHistory(h){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(h));}catch(e){}}
 
+// Sécurisation anti-injection HTML
+function escapeHTML(str){
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 let currentBoostId=null,currentQuestions=[],currentIndex=0,selectedOption=null,answered=false,correctCount=0,wrongCount=0;
+
+
 
 function showPage(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
@@ -1339,7 +1351,7 @@ function validateAnswer(){
   if(ok) correctCount++; else wrongCount++;
   const fb=document.getElementById("quiz-feedback");
   fb.className="quiz-feedback show "+(ok?"correct-fb":"wrong-fb");
-  fb.innerHTML=`<div class="fb-label ${ok?"ok":"ko"}">${ok?"✓ Correct !":"✗ Incorrect"}</div>${q.expl}`;
+  fb.innerHTML=`<div class="fb-label ${ok?"ok":"ko"}">${ok?"✓ Correct !":"✗ Incorrect"}</div>${escapeHTML(q.expl)}`;
   document.getElementById("btn-validate").style.display="none";
   const bn=document.getElementById("btn-next");
   bn.style.display="block";
